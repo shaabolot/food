@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.block{
+    width: 500px;
+    height: 500px;
+    border: 1px solid;
+    position: relative;
+}
+    .box{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: 2s;
+    }
+
+    .box1{
+        background-color: red;
+        animation: box 6s 3s infinite;  
+    }
+    .box2{
+        background-color: green;
+        animation: box 6s infinite;  
+    }
+
+    @keyframes box {
+        0%,100%{
+            top: 0;
+            left: 0;
+        }25%{
+            left: 0;
+            top: 400px;
+        }50%{
+            left: 400px;
+            top: 400px;
+        }75%{
+            top: 0;
+            left: 400px;
+        }
+    }
+
+</style>
+<body>
+    <div class="block">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+    </div>
+
+    <button onclick="btnClick()">click</button>
+
+    <script src="./main.js"></script>
+</body>
+</html>
